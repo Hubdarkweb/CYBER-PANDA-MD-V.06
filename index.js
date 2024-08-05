@@ -19,11 +19,11 @@ const { smsg, isUrl, generateMessageTag, getsize, getBuffer, getSizeMedia, fetch
 
 
 //bug database
-const { vajiratext1 } = require('./lib/bugs/vajiratext1')
-const { vajiratext2 } = require('./lib/bugs/vajiratext2')
-const { vajiratext3 } = require('./lib/bugs/vajiratext3')
-const { vajiratext4 } = require('./lib/bugs/vajiratext4')
-const { vajiratext5 } = require('./lib/bugs/vajiratext5')
+const { sachith1 } = require('./lib/bugs/sachith1')
+const { sachith2 } = require('./lib/bugs/sachith2')
+const { sachith3 } = require('./lib/bugs/sachith3')
+const { sachith4 } = require('./lib/bugs/sachith4')
+const { sachith5 } = require('./lib/bugs/sachith5')
 const { buttonkal } = require('./lib/bugs/buttonkal')
 const { virtex7 } = require('./lib/bugs/virtex7')
 const { ngazap } = require('./lib/bugs/ngazap')
@@ -115,7 +115,7 @@ async function startvajira() {
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         if (mek.key.id.startsWith('FatihArridho_')) return
         m = smsg(vajira, mek, store)
-        require("./vajira")(vajira, m, chatUpdate, store)
+        require("./main")(vajira, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
